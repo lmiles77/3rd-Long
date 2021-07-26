@@ -10,3 +10,5 @@ Jupyter Notebook, imblearn, Scikitlearn used to run machine learning. Further ev
 
 ## Dashboard
 In addition to using a Flask template, we will also integrate D3.js, HTML, and Javascipt for a fully functioning and interactive dashboard. It will be hosted on Github.
+
+Team Dyer Observatory 
