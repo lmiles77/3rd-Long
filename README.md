@@ -4,6 +4,7 @@ The raw data used for this machine learning project is 2020 NFL play data. This 
 
 Analysis of the raw data revealed there were many data points that were uneeded. A new dataframe was created utilizing six columns
 https://github.com/lmiles77/3rd-Long/blob/Square_Trainer/Images/new_df%20.PNG
+![image](https://user-images.githubusercontent.com/80069183/128651386-bdc57655-5e57-46a2-a9a2-076fcef7adbc.png)
 
 
 
