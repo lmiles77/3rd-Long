@@ -28,12 +28,17 @@ The accuracy score for this model is 68%. I feel the overall accuracy of the mod
 
 ![image](https://user-images.githubusercontent.com/80069183/128656886-63fea06f-67ed-4d46-bcc5-4707c89c71b9.png)
 
-The classification report for this module reveals precision of predictions to have a fairly significant range between them, with a difference of 13 percentage points. The recall for Actual 0 (N) predictions was 69% which was just above Actual 1(Y) at 66%. The F1 score (percent of accuracte positive predictions) predictions for Actual 0, and Actual 1 were 72% and 63%.  
+The image below of the classification report shows the main classification metrics precision, recall and f1-score on a per-class basis. This report shows the precision of predictions to have a fairly significant range between them, with a difference of 13 percentage points. The recall for Actual 0 (N) predictions was 69% which was just above Actual 1(Y) at 66%. The F1 score (percent of accuracte positive predictions) predictions for Actual 0, and Actual 1 were 72% and 63%. The last columns displays the number of samples for each set of predictions. 
 
-How does it work?
-Why this specific model?
-What is the model's accuracy?
-If there are statistics involved, what stats are being included in analysis and why?
+![image](https://user-images.githubusercontent.com/80069183/128660158-68e25f92-1706-475d-b981-f435fa431efc.png)
+
+Additional machine learning models were also considered for this project, however the logistical regreassion model yielded the highest accuracy percentage.
+
+Balanced Random Forest Classifier 62%
+Easy Ensemble AdaBoost Classifier 66%
+SMOTEENN (Combination Over/Under) 62%
+
+
 
 # Dyer Observatory Communication Plan
 
