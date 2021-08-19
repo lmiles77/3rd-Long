@@ -1,0 +1,8 @@
+body {
+    color: #339BFF;
+  }
+.jumbotron {
+    background-image: url("images/football.jpg");
+    background-size: 100% 100%;
+    text-align: center;
+  }
