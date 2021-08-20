@@ -7,20 +7,28 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Team Dyer Observatory Presents</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="static/css/style.css" />
 </head>
+<!-- <body class="bg-dark">
+  <div class="wrapper"> -->
+<!--Navbar-->
+<!-- <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+      <a class="navbar-brand" href="index.html"></a>
+    </nav> -->
 
-<body style="background-color:#339BFF">
-  <div class="container">
+<body>
+  <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12 jumbotron text-center">
-        <h1 style="font-family: Arial, Helvetica, sans-serif; color: #EE4B2B"><b>3rd and Long</b></h1>
-        <p style="font-family: Arial, Helvetica, sans-serif; color: #EE4B2B"><b>Become the coach, choose the play and
-            formation. The pressure is on, can you convert 3rd and long? </b></p>
+      <div class="col-md-8 jumbotron text-center">
+        <h1 style="font-family: Arial, Helvetica, sans-serif; color: #0caaf3"><b>3rd and Long</b></h1>
+        <h2 style="font-family: Arial, Helvetica, sans-serif; color: #06b2f7"><b>Become the coach, choose yards to
+            go, the play and formation. The pressure is on, can you convert 3rd and long? </b></2>
       </div>
     </div>
-    <form method="POST">
-      <div class="row">
+  </div>
+  <form method="POST">
+    <div class="row">
+      <div class="col-md-12">
         <div class="col-md-2">
           <div class="well">
             <h5>Play Type</h5>
@@ -33,40 +41,44 @@
               <option value="scramble">Scramble</option>
             </select>
             <!-- <select id="selDataset" onchange="optionChanged(this.value)"></select> -->
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="">
+        <div class="col-md-12">
+          <div class="col-md-2">
+            <div class="well">
+              <h5>Formation</h5>
+              <label for="formation">Choose a formation:</label>
+              <select name="formation" id="formation">
+                <option value="no huddle">No Huddle</option>
+                <option value="no huddle shotgun">No Huddle Shotgun</option>
+                <option value="shotgun">Shotgun</option>
+                <option value="under center">Under Center</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-2">
-          <div class="well">
-            <h5>Formation</h5>
-            <label for="formation">Choose a formation:</label>
-            <select name="formation" id="formation">
-              <option value="pass">Pass</option>
-              <option value="rush">Rush</option>
-              <option value="fumble">Fumble</option>
-              <option value="sack">Sack</option>
-              <option value="scramble">Scramble</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-2">
-          <div class="well">
-            <h5>Yards to Go</h5>
-            <label for="togo">Choose Yards:</label>
-            <select name="togo" id="togo">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-            </select>
+        <div class="col-md-12">
+          <div class="col-md-2">
+            <div class="well">
+              <h5>Yards to Go</h5>
+              <label for="togo">Choose Yards:</label>
+              <select name="togo" id="togo">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+              </select>
+            </div>
           </div>
         </div>
       </div>
@@ -77,13 +89,13 @@
           </div>
         </div>
       </div>
-    </form>
-    <div class="panel panel-primary">
-      <div class="panel-heading">
-        <h3 class="panel-title">Demographic Info</h3>
-      </div>
-      <div id="sample-metadata" class="panel-body"></div>
+  </form>
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h3 class="panel-title"></h3>
     </div>
+    <div id="sample-metadata" class="panel-body"></div>
+  </div>
   </div>
   <div class="col-md-5">
     <div id="bar"></div>
@@ -98,6 +110,9 @@
     </div>
   </div>
   </div>
+  <audio controls>
+    <source src="../audio/nfl_theme.mp3" type="audio/mpeg" />
+  </audio>
 </body>
 
 </html>
