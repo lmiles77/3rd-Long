@@ -1,0 +1,9 @@
+body {
+  background-image: url("static/css/images/NFL.jpg");
+  }
+.jumbotron {
+    background-image: url("static/css/images/WeReady.png");
+    background-size: 100% 100%;
+    align-items: center;
+    text-align: center;
+  }
