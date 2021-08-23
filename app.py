@@ -1,6 +1,6 @@
 
 import numpy as np
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect, url_for
 import joblib 
 
 
@@ -12,9 +12,13 @@ model = joblib.load('classifier.pkl')
 def home():
     return render_template('index.html')
 
-@app.route('/predict')
+@app.route('/predict', methods = ['POST'])
 def predict():
     return render_template('predict.html')
+
+@app.route('/results')
+def results():
+    return render_template('results.html')
 
 
 @app.route('/', methods=['POST'])
@@ -33,19 +37,19 @@ def ValuePredictor():
 
     if request.form["formation"] == "no huddle":
         Formation_NOHUDDLE = 1
-    elif request.form["formation"] == "no huddle shotgun":
+    if request.form["formation"] == "no huddle shotgun":
         Formation_NOHUDDLESHOTGUN = 1
-    elif request.form["formation"] == "shotgun":
+    if request.form["formation"] == "shotgun":
         Formation_SHOTGUN = 1
-    elif request.form["formation"] == "under center":
+    if request.form["formation"] == "under center":
         Formation_UNDERCENTER = 1
-    elif request.form["play"] == "pass":
+    if request.form["play"] == "pass":
         PlayType_PASS = 1
-    elif request.form["play"] == "rush":
+    if request.form["play"] == "rush":
         PlayType_RUSH = 1
-    elif request.form["play"] == "sack":
+    if request.form["play"] == "sack":
         PlayType_SACK = 1
-    elif request.form["play"] == "scramble":
+    if request.form["play"] == "scramble":
         PlayType_SCRAMBLE = 1
     
     form_data =[
@@ -59,17 +63,20 @@ def ValuePredictor():
         PlayType_SACK,
         PlayType_SCRAMBLE        
     ]
+    print (form_data)
     # convert form_data into a form like [2,0,0,1,0,0,1,0,0]
     #form_data= list(form_data.values())
     #form_data = list(map(int, form_data))
-    result = ValuePredictor(form_data)
+    result = model.predict(np.asarray(form_data,dtype = np.float64).reshape(-1,9))[0]
+    print(result)
     
     if int(result) == 1:
         prediction = 'YOU DID IT! CONVERSION SUCCESSFUL, VICTORY DANCE IS ON POINT!'
     else:
         prediction = 'You need more practice, better luck next time.'
     print (prediction)
-    return prediction 
+    return prediction
+    
 
 if __name__ == '__main__':
      app.run(debug=True)
