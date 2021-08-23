@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Bootcamp-Project
 
 # Google Presentation
