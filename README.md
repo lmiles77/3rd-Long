@@ -5,7 +5,7 @@ https://docs.google.com/presentation/d/1NIDlW9_MCN8BETQg4bx3YtIgcSmtW5WOar1Wy31D
 
 # Dashboard Recording
 
-
+https://github.com/lmiles77/3rd-Long/blob/22d016dd2a7bafe82dda1efea3d3cda090749326/Dashboard_Recording.mov
 
 # Building Machine Learning Model
 
